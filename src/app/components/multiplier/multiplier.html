@@ -1,0 +1,30 @@
+<section class="container">
+  <h2 class="section-title">Multiplier with signals</h2>
+  <p class="description">
+    This feature demonstrates the use of signals in Angular for state management with ngrx.
+    You can multiply the counter values and observe the changes in real-time.
+  </p>
+  <div class="counter-section">
+    <div class="display">
+      <p class="value">{{ count() }}</p>
+    </div>
+    <div class="buttons-place">
+      <button class="btn btn-orange" (click)="increment()">Increment</button>
+      <button class="btn btn-orange" (click)="decrement()">Decrement</button>
+      <button class="btn btn-orange-outline" (click)="reset()">Reset</button>
+    </div>
+  </div>
+  <div class="multiplier-section">
+    <div class="display">
+      <p class="value">{{ multiplier() }}</p>
+    </div>
+    <div class="buttons-place">
+      <button class="btn btn-orange" (click)="incrementMultiplier()">Increment Multiplier</button>
+      <button class="btn btn-orange" (click)="decrementMultiplier()">Decrement Multiplier</button>
+      <button class="btn btn-orange-outline" (click)="resetMultiplier()">Reset Multiplier</button>
+    </div>
+  </div>
+  <div class="final-result">
+    <p class="value">{{ multipliedCount() }}</p>
+  </div>
+</section>

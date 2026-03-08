@@ -1,0 +1,15 @@
+<section class="container">
+  <h2 class="section-title">Counter</h2>
+  <p class="section-description">
+    This is a simple counter feature that demonstrates basic state management using NGRX in Angular.
+    You can increment, decrement, and reset the counter value. The current count is displayed below.
+  </p>
+  <div class="counter-display">
+    <p class="count-value">{{ count$ | async }}</p>
+  </div>
+  <div class="buttons-place">
+    <button class="btn btn-orange" (click)="increment()">Increment</button>
+    <button class="btn btn-orange" (click)="decrement()">Decrement</button>
+    <button class="btn btn-orange-outline" (click)="reset()">Reset</button>
+  </div>
+</section>
