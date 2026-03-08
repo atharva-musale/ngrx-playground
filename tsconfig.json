@@ -12,6 +12,11 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "paths": {
+      "stores": [
+        "./dist/stores"
+      ]
+    },
     "target": "ES2022",
     "module": "preserve"
   },
@@ -28,6 +33,12 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/stores/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/stores/tsconfig.spec.json"
     }
   ]
 }

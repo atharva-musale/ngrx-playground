@@ -7,7 +7,7 @@ import {
   selectCount,
   selectMultiplier,
   setMultiplierAction,
-} from '../../store';
+} from 'stores';
 
 @Component({
   selector: 'app-multiplier',

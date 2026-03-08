@@ -7,7 +7,7 @@ import {
   incrementCounterAction,
   resetCounterAction,
   selectCount,
-} from '../../store';
+} from 'stores';
 
 @Component({
   selector: 'app-counter',
