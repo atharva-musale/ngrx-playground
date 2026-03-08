@@ -3,5 +3,9 @@ export interface GeneralState {
 }
 
 export const initialGeneralState: GeneralState = {
-  multiplier: undefined
+  multiplier: 1
 };
+
+export interface GeneralStore {
+  general: GeneralState;
+}

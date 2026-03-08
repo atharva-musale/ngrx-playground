@@ -5,3 +5,7 @@ export interface CounterState {
 export const initialCounterState: CounterState = {
   count: 0
 };
+
+export interface CounterStore {
+  counter: CounterState;
+}

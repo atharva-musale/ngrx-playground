@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
-import { Home } from './components/home/home';
-import { Counter } from './components/counter/counter';
-import { Multiplier } from './components/multiplier/multiplier';
+import { CounterPageComponent, HomeComponent, MultiplierComponent } from './pages';
+
 
 export const routes: Routes = [
-  { path: 'home', component: Home },
-  { path: 'counter', component: Counter },
-  { path: 'multiplier', component: Multiplier },
+  { path: 'home', component: HomeComponent },
+  { path: 'counter', component: CounterPageComponent },
+  { path: 'multiplier', component: MultiplierComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

@@ -3,6 +3,7 @@ import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {
+  CounterStore,
   decrementCounterAction,
   incrementCounterAction,
   resetCounterAction,
@@ -12,14 +13,14 @@ import {
 @Component({
   selector: 'app-counter',
   imports: [AsyncPipe],
-  templateUrl: './counter.html',
-  styleUrl: './counter.css',
+  templateUrl: './counter-page.template.html',
+  styleUrls: ['./counter-page.style.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Counter {
+export class CounterPageComponent {
   public count$: Observable<number>;
 
-  constructor(private store: Store) {
+  constructor(private store: Store<CounterStore>) {
     this.count$ = this.store.select(selectCount);
   }
 

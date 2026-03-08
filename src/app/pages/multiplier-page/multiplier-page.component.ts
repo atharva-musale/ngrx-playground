@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, Signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
+  CounterStore,
   decrementCounterAction,
+  GeneralStore,
   incrementCounterAction,
   resetCounterAction,
   selectCount,
@@ -12,11 +14,11 @@ import {
 @Component({
   selector: 'app-multiplier',
   imports: [],
-  templateUrl: './multiplier.html',
-  styleUrl: './multiplier.css',
+  templateUrl: './multiplier-page.template.html',
+  styleUrls: ['./multiplier-page.style.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Multiplier {
+export class MultiplierComponent {
   public count: Signal<number>;
   public multiplier: Signal<number | null | undefined>;
 
@@ -24,9 +26,7 @@ export class Multiplier {
 
   private multiplierValue = 1;
 
-  constructor(private store: Store) {
-    this.store.dispatch(setMultiplierAction({ value: this.multiplierValue }));
-
+  constructor(private store: Store<CounterStore & GeneralStore>) {
     this.count = this.store.selectSignal(selectCount);
     this.multiplier = this.store.selectSignal(selectMultiplier);
     this.multipliedCount = computed(() => this.count() * (this.multiplier() ?? 1));
